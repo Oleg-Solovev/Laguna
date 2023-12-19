@@ -1,14 +1,93 @@
+:root {
+  --yellow-extralight: #F0BF5F;
+  --yellow-light: #C93;
+  --yellow-dark: #A47312;
+}
+
+@media (max-width: 920px) {
+
+  .special__item-title--lux {
+    font-size: 40px;
+  }
+
+  .special__item-title {
+    font-size: 20px;
+  }
+
+}
 
 
 @media (max-width: 800px) {
-  .header__nav-container {
-    justify-content: center;
+
+  .header__container {
+    flex-wrap: wrap;
   }
 
   .nav__list {
-    /* margin: 0 auto; */
-    /* Сделать навигацию по центру */
     gap: 15px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header__img {
+    width: 150px;
+  }
+
+  .header__tel {
+    font-size: 16px;
+  }
+
+  .header__burger-btn {
+    display: block;
+  }
+
+  .header__nav {
+    position: absolute;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    background-color: gray;
+    padding: 75px 20px 20px 20px;
+    transition: transform .5s;
+  }
+
+  .nav__list {
+    display: block;
+  }
+
+  .nav__link {
+    color: white;
+    font-size: 21px;
+    display: block;
+    padding: 10px 0;
+  }
+
+  .header.open .header__nav {
+    transform: translateX(100%);
+  }
+
+}
+
+
+@media (max-width: 430px) {
+
+  .header__logo {
+    margin: 0;
+  }
+
+  .header__tel,
+  .header__link {
+    margin: 0 auto;
+  }
+
+  .header__nav-container {
+    padding: 0;
+  }
+
+  .btn-header {
+    padding: 7px 14px;
   }
 
 }
