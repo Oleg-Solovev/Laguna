@@ -14,6 +14,22 @@
     font-size: 20px;
   }
 
+  .special__descr--lux {
+    font-size: 20px;
+  }
+
+  .advantages__items {
+    --offsets: 2;
+  }
+
+  .placement__descr {
+    padding: 20px;
+  }
+
+  .footer__left {
+    margin-right: 30px;
+  }
+
 }
 
 
@@ -27,9 +43,44 @@
     gap: 15px;
   }
 
+  .services__item {
+    padding: 20px;
+    padding-top: 185px;
+  }
+
+  .advantages__items {
+    --offsets: 1;
+  }
+
+  .placement__items {
+    --offsets: 1;
+  }
+
+  .contacts__item {
+    flex-direction: column;
+  }
+
+  .footer__address {
+    margin-right: 40px;
+  }
+
+  .address__item {
+    min-width: 160px;
+  }
+
 }
 
 @media (max-width: 600px) {
+
+  .section-title {
+    font-size: 25px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .header__container {
+    margin-bottom: 10px;
+  }
 
   .header__img {
     width: 150px;
@@ -68,10 +119,101 @@
     transform: translateX(100%);
   }
 
+  .special__items {
+    flex-wrap: wrap;
+  }
+
+  .special__item-wrap {
+    width: 100%;
+  }
+
+  .services__items {
+    --offsets: 0;
+  }
+
+  .advantages__item {
+    padding: 55px 10px 10px 10px;
+    background-position: 10px 10px;
+    background-size: 40px;
+  }
+
+  .placement__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .placement__item {
+    max-width: 375px;
+    width: 100%;
+  }
+
+  .form__wrap {
+    background-color: #E9E9E9;
+  }
+
+
+  .contacts__btn {
+    padding: 20px;
+  }
+
+  .forms__content {
+    padding: 20px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .contacts__container {
+    padding: 20px;
+  }
+
+  
+  .contacts__item {
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+  }
+
+  .footer__container {
+    padding: 20px;
+    background-size: 30%;
+    flex-direction: column-reverse;
+  }
+
+  .social {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer__right {
+    margin: 0;
+  }
+
+  .footer__address {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer__descr {
+    margin-bottom: 20px;
+  }
+
+  .footer__left {
+    margin: 0;
+  }
+
 }
 
 
 @media (max-width: 430px) {
+
+  .section-offset {
+    padding: 15px 0;
+  }
+
+  .header {
+    padding: 20px 0;
+  }
 
   .header__logo {
     margin: 0;
@@ -88,6 +230,27 @@
 
   .btn-header {
     padding: 7px 14px;
+  }
+
+  .advantages__items {
+    --offsets: 0;
+  }
+
+  .forms__content {
+    padding: 20px;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts__img {
+    display: none;
+  }
+
+  .footer__address {
+    display: none;
   }
 
 }
