@@ -21,6 +21,7 @@ img {
   --yellow-extralight: #F0BF5F;
   --yellow-light: #C93;
   --yellow-dark: #A47312;
+  --gap: 24px;
 }
 
 @font-face {
@@ -113,8 +114,7 @@ body {
 }
 
 .section-offset {
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding: 35px 0;
 }
 
 .section-title {
@@ -423,18 +423,20 @@ body {
 .services__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  --offsets: 1;
+  gap: var(--gap);
 }
 
 .services__item {
   flex-direction: column;
   align-items: flex-start;
   padding: 190px 126px 35px 45px;
-  width: 573px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   margin-bottom: 24px;
   background-repeat: no-repeat;
   border-radius: 15px;
   background-color: #fff;
+  background-position: cover;
   position: relative;
 }
 
@@ -493,6 +495,7 @@ body {
 
 .arrow {
   stroke: var(--yellow-light);
+  flex-shrink: 0;
   transform: translateX(5px);
   transition: stroke .3s ease-in-out, transform .3s ease-in-out;
 }
@@ -506,6 +509,7 @@ body {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
+  max-width: 400px;
   line-height: 32px;
   color: #000;
 }
@@ -519,25 +523,18 @@ body {
 
 .advantages__items {
   flex-wrap: wrap;
-  gap: 22px;
+  --offsets: 3;
+  gap: var(--gap);
 }
 
 .advantages__item {
-  width: 276px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   padding: 116px 32px 42px 45px;
   background-color: #fff;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-position: 40px 45px;
 }
-
-/* .advantages__item:not(:nth-child(4n)) {
-  margin-right: 22px;
-}
-
-.advantages__item:nth-last-child(-n + 4) {
-  margin-bottom: 0;
-} */
 
 .advantages__item-descr {
   margin: 0;
@@ -583,7 +580,8 @@ body {
 .placement__items {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  --offsets: 2;
+  gap: var(--gap);
 }
 
 .placement-img {
@@ -594,20 +592,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 374px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
   margin-bottom: 24px;
   background-color: #fff;
   border-radius: 15px;
   position: relative;
 }
-
-/* .placement__item:not(:nth-child(3n)) {
-  margin-right: 24px;
-}
-
-.placement__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} */
 
 .placement__item--special {
   display: flex;
@@ -646,6 +636,8 @@ body {
 
 .placement__price {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .price {
@@ -654,8 +646,8 @@ body {
   color: #000;
 }
 
-.space-right {
-  margin-right: 52px;
+.placement__star-wrap {
+  flex-shrink: 0;
 }
 
 .placement__descr-title {
@@ -693,10 +685,15 @@ body {
 .form {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #fff;
   padding: 30px;
   border-radius: 15px;
   align-items: center;
+}
+
+.form__wrap {
+  margin-bottom: 15px;
 }
 
 .form__span {
@@ -718,8 +715,8 @@ body {
   border: none;
 }
 
-.form__input_ {
-  width: 121px;
+.form__input-count {
+  max-width: 121px;
   border: none;
   border-bottom: 1px solid #E9E9E9;
 }
@@ -739,8 +736,24 @@ body {
 }
 
 .contacts__addres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 375px;
   width: 100%;
+  margin-right: 10px;
+}
+
+.contacts__img {
+  max-width: 653px;
+  width: 100%;
+  min-height: 528px;
+  background-color: white;
+  background-image: url("../img/contacts-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
 }
 
 .contacts__style {
@@ -765,6 +778,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
+  margin-right: 10px;
 }
 
 .contacts__descr {
@@ -783,6 +797,7 @@ body {
 
 .contacts__btn {
   padding: 30px;
+  width: fit-content;
 }
 
 /* footer */
@@ -793,9 +808,9 @@ body {
   justify-content: space-between;
   border-radius: 15px;
   background: #333;
-  background-image: url(../img/footer-img.svg);
+  background-image: url(../img/footer-img.png);
   background-repeat: no-repeat;
-  background-position: 739px bottom;
+  background-position: 90% bottom;
 }
 
 .footer__left {
