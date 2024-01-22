@@ -102,6 +102,7 @@
     background-color: gray;
     padding: 75px 20px 20px 20px;
     transition: transform .5s;
+    z-index: 10;
   }
 
   .nav__list {
